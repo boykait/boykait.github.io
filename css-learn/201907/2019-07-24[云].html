@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: #fff;
+            padding: 0;
+            overflow: hidden;
+            height: 500px;
+            margin: 0;
+        }
+
+        .container {
+            width: 900px;
+            height: 400px;
+            overflow: hidden;
+            margin: 0 auto;
+            background-color: #00c9ee;
+        }
+
+        /* Clouds */
+        #clouds {
+            top: 100px;
+            position: relative;
+            -webkit-animation: move 20s infinite linear;
+            -moz-animation: move 20s infinite linear;
+            -ms-animation: move 20s infinite linear;
+            z-index: 1;
+        }
+
+        .cloud1 {
+            width: 200px;
+            height: 60px;
+            background: #fff;
+            position: absolute;
+            top: 80px;
+
+            -webkit-border-radius: 200px;
+            -moz-border-radius: 200px;
+            border-radius: 200px;
+
+        }
+
+        .cloud1:before {
+            content: '';
+            position: absolute;
+            background: #fff;
+            width: 80px;
+            height: 80px;
+            top: -40px;
+            left: 20px;
+
+            -webkit-border-radius: 200px;
+            -moz-border-radius: 200px;
+            border-radius: 200px;
+
+        }
+
+        .cloud1:after {
+            content: '';
+            position: absolute;
+            background: #fff;
+            width: 100px;
+            height: 100px;
+            top: -60px;
+            right: 30px;
+
+            -webkit-border-radius: 200px;
+            -moz-border-radius: 200px;
+            border-radius: 200px;
+        }
+
+        #clouds .cloud1, #clouds .cloud1:after, #clouds .cloud1:before {
+            background: #fff;
+            box-shadow: 0px 0px 20px 5px #fff;
+            -moz-box-shadow: 0px 0px 20px 5px #fff;
+            -webkit-box-shadow: 0px 0px 20px 5px #fff;
+        }
+
+        @-webkit-keyframes move {
+            0% {
+                left: 0px;
+            }
+            49% {
+                left: 940px;
+                opacity: 1;
+            }
+            50% {
+                left: 940px;
+                opacity: 0;
+            }
+            51% {
+                left: -940px;
+                opacity: 0;
+            }
+            52% {
+                left: -940px;
+                opacity: 1;
+            }
+            100% {
+                left: 0px;
+            }
+        }
+
+        @-moz-keyframes move {
+            0% {
+                left: 0px;
+            }
+            49% {
+                left: 940px;
+                opacity: 1;
+            }
+            50% {
+                left: 940px;
+                opacity: 0;
+            }
+            51% {
+                left: -940px;
+                opacity: 0;
+            }
+            52% {
+                left: -940px;
+                opacity: 1;
+            }
+            100% {
+                left: 0px;
+            }
+        }
+
+        @-ms-keyframes move {
+            0% {
+                left: 0px;
+            }
+            49% {
+                left: 940px;
+                opacity: 1;
+            }
+            50% {
+                left: 940px;
+                opacity: 0;
+            }
+            51% {
+                left: -940px;
+                opacity: 0;
+            }
+            52% {
+                left: -940px;
+                opacity: 1;
+            }
+            100% {
+                left: 0px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="clouds">
+        <div class="cloud1"></div>
+    </div>
+</div>
+</body>
+</html>
